@@ -1,10 +1,29 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Navbar.css'
+import { assets } from '../../assets/assets.js'
+
 
 const Navbar = () => {
+  //undeline clicking rhe menu item
+  const [menu,setmenu] = useState("home");
+
   return (
-    <div className='my'>
-      <h2>hello</h2>
+    <div className='navbar'>
+      <img src={assets.logo} alt="" className='logo' />
+      <ul className="navbar-menu">
+        <li onClick={() => setmenu("home")} className={menu==="home"?"active":""}>Home</li>
+        <li onClick={() => setmenu("menu")} className={menu==="menu"?"active":""}>Menu</li>
+        <li onClick={() => setmenu("mobile-app")} className={menu==="mobile-app"?"active":""}>Mobile App</li>
+        <li onClick={() => setmenu("contact-uc")} className={menu==="contact-uc"?"active":""}>Contact Us</li>
+      </ul>
+      <div className="navbar-right">
+          <img src={assets.search_icon} alt="" />
+          <div className="navbar-search-icon">
+            <img src={assets.basket_icon} alt="" />
+            <div className='dot'></div>
+          </div>
+          <button>Sign in</button>
+      </div>
     </div>
   )
 }
