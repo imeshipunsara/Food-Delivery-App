@@ -21,10 +21,10 @@
     gap: 40px;
 }
 .navbar button{
-    background-color: rgb(249, 76, 50);
+    background-color:#E53935;
     font-size: 16px;
-    color: black;
-    border: 1px solid rgb(252, 53, 53);
+    color: rgb(0, 0, 0);
+    border: 1px solid #ef2f2f;
     padding: 10px 30px;
     border-radius: 50px;
     cursor: pointer;
@@ -35,7 +35,7 @@
 }
 .navbar .active{
     padding-bottom: 2px;
-    border-bottom: 2px solid rgb(242, 55, 26);
+    border-bottom: 2px solid #E53935;
 }
 .navbar li{
     cursor: pointer;
@@ -47,7 +47,7 @@
     position: absolute;
     min-width: 10px;
     min-height: 10px;
-    background-color: rgb(242, 55, 26);
+    background-color: #E53935;
     border-radius:5px;
     top: -8px;
     right: -8px;
