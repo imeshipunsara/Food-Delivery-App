@@ -4,7 +4,7 @@ import { assets } from '../../assets/assets.js'
 import { Link } from 'react-router-dom'
 
 
-const Navbar = () => {
+const Navbar = ({setShowLogin}) => {
   //undeline clicking rhe menu item
   const [menu,setmenu] = useState("home");
 
@@ -23,7 +23,7 @@ const Navbar = () => {
             <img src={assets.basket_icon} alt="" />
             <div className='dot'></div>
           </div>
-          <button>Sign in</button>
+          <button onClick={()=>setShowLogin(true)}>Sign in</button>
       </div>
     </div>
   )
