@@ -2,10 +2,13 @@ import React from 'react'
 import './Cart.css'
 import { useContext } from 'react'
 import { StoreContext } from '../../context/StoreContext'
+import { useNavigate } from 'react-router-dom'
 
 const Cart = () => {
 
   const { cartItems, food_list, removeFromCart, getTotalCartAmount } = useContext(StoreContext);
+
+  const navigate = useNavigate(); //proceed to checkout button eka click karoth me function eken call wenawa. user navigate wenwa place order page ekata
 
   return (
     <div className='cart'>
@@ -57,8 +60,8 @@ const Cart = () => {
               <b>Total</b>
               <p>Rs. {getTotalCartAmount() + 2}</p>
             </div>
-          </div>
-          <button>Proceed to Checkout</button>
+          </div> 
+          <button onClick={() => navigate('/order')}>PROCEED TO CHECKOUT</button>  
         </div>
         <div className="cart-promocode">
           <div>
